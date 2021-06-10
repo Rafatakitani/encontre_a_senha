@@ -1,0 +1,169 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/Control.gd" type="Script" id=1]
+[ext_resource path="res://img.png" type="Texture" id=2]
+
+[sub_resource type="Theme" id=1]
+Button/colors/font_color = Color( 0.623529, 0.623529, 0.623529, 1 )
+Button/colors/font_color_disabled = Color( 0.470588, 0.470588, 0.470588, 0.2 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = null
+Button/styles/pressed = null
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 6.0
+margin_right = -1.0
+margin_bottom = -70.0
+theme = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_top = -13.0
+margin_right = 500.0
+margin_bottom = 494.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 111.0
+margin_top = 120.0
+margin_right = 131.0
+margin_bottom = 134.0
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+margin_left = 87.0
+margin_top = 45.0
+margin_right = 160.0
+margin_bottom = 137.0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Panel/GridContainer"]
+margin_right = 20.0
+margin_bottom = 20.0
+text = "0"
+
+[node name="Button2" type="Button" parent="Panel/GridContainer"]
+margin_left = 24.0
+margin_right = 44.0
+margin_bottom = 20.0
+text = "1"
+
+[node name="Button3" type="Button" parent="Panel/GridContainer"]
+margin_left = 48.0
+margin_right = 68.0
+margin_bottom = 20.0
+text = "2"
+
+[node name="Button4" type="Button" parent="Panel/GridContainer"]
+margin_top = 24.0
+margin_right = 20.0
+margin_bottom = 44.0
+text = "3"
+
+[node name="Button5" type="Button" parent="Panel/GridContainer"]
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 44.0
+margin_bottom = 44.0
+text = "4"
+
+[node name="Button6" type="Button" parent="Panel/GridContainer"]
+margin_left = 48.0
+margin_top = 24.0
+margin_right = 68.0
+margin_bottom = 44.0
+text = "5"
+
+[node name="Button7" type="Button" parent="Panel/GridContainer"]
+margin_top = 48.0
+margin_right = 20.0
+margin_bottom = 68.0
+text = "6"
+
+[node name="Button8" type="Button" parent="Panel/GridContainer"]
+margin_left = 24.0
+margin_top = 48.0
+margin_right = 44.0
+margin_bottom = 68.0
+text = "7"
+
+[node name="Button9" type="Button" parent="Panel/GridContainer"]
+margin_left = 48.0
+margin_top = 48.0
+margin_right = 68.0
+margin_bottom = 68.0
+text = "8"
+
+[node name="Button10" type="Button" parent="Panel/GridContainer"]
+margin_top = 72.0
+margin_right = 20.0
+margin_bottom = 92.0
+text = "9"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+margin_left = 323.0
+margin_right = 498.0
+margin_bottom = 437.0
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 104.535
+margin_top = 17.9297
+margin_right = 137.535
+margin_bottom = 31.9297
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img" type="Sprite" parent="Panel"]
+position = Vector2( 111.808, 221.131 )
+scale = Vector2( 1, 0.985908 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_top = 4.9297
+margin_right = 500.0
+margin_bottom = 428.93
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="resultado" type="Label" parent="."]
+margin_left = 105.0
+margin_top = 232.0
+margin_right = 402.0
+margin_bottom = 361.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="reset" type="Button" parent="."]
+visible = false
+margin_left = 323.0
+margin_top = 306.0
+margin_right = 352.0
+margin_bottom = 335.0
+text = "REINICIAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="reset" to="." method="_on_RESET_pressed"]
